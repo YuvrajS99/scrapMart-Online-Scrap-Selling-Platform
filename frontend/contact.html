@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | ScrapMart</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body class="dashboard-body">
+
+  <div id="navbar"></div>
+
+  <div class="page-wrapper">
+
+    <div class="container glass-panel">
+
+      <h1>Contact Us</h1>
+
+      <p>Email us anytime:</p>
+
+      <p>
+        📧 scrapmart.support@gmail.com
+      </p>
+
+      <p>
+        We usually respond within 24 hours.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch("components/navbar.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("navbar").innerHTML = data);
+
+    fetch("components/footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
+
+</body>
+
+</html>

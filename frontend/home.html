@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ScrapMart | Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body class="dashboard-body">
+
+  <div id="navbar"></div>
+
+  <div class="page-wrapper">
+
+    <div class="container glass-panel">
+
+      <h1 class="hero-title">Welcome to ScrapMart ♻</h1>
+
+      <p class="hero-text">
+        ScrapMart is a smart recycling platform that connects users with scrap collectors.
+        You can easily add scrap, track status, and contribute to a cleaner environment.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch("components/navbar.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("navbar").innerHTML = data);
+
+    fetch("components/footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
+
+</body>
+
+</html>

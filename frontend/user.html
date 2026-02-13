@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>User Dashboard | ScrapMart</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+
+<body class="dashboard-body">
+
+  <!-- NAVBAR -->
+  <div id="navbar"></div>
+
+
+  <!-- MAIN CONTENT -->
+  <div class="container dashboard-container">
+
+    <h2>Add Scrap</h2>
+
+    <div class="scrap-form">
+      <input type="text" id="category" placeholder="Category">
+      <input type="number" id="weight" placeholder="Weight (kg)">
+      <input type="text" id="location" placeholder="Location">
+      <button onclick="addScrap()" class="primary-btn">Add Scrap</button>
+    </div>
+
+
+    <h2>My Scraps</h2>
+
+    <table class="scrap-table">
+
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Weight</th>
+          <th>Location</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody id="scrapTable"></tbody>
+
+    </table>
+
+  </div>
+
+
+  <!-- FOOTER -->
+  <div id="footer"></div>
+
+
+
+  <!-- LOAD COMPONENTS -->
+  <script>
+    fetch("components/navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+
+    fetch("components/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+
+
+  <script src="js/api.js"></script>
+  <script src="js/user.js"></script>
+
+</body>
+
+</html>
