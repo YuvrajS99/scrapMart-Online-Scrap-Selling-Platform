@@ -49,7 +49,7 @@ async function register() {
 
   try {
 
-    const res = await fetch("<PASTE RENDER URL HERE AFTER DEPLOYMENT>/api/auth/register", {
+    const res = await fetch("https://scrapmart-online-scrap-selling-platform.onrender.com/api/auth/register", {
 
       method: "POST",
 
