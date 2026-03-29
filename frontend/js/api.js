@@ -1,4 +1,4 @@
-const API_BASE = "<PASTE RENDER URL HERE AFTER DEPLOYMENT>/api";
+const API_BASE = "https://scrapmart-online-scrap-selling-platform.onrender.com/api";
 
 async function apiRequest(endpoint, method = "GET", body = null) {
   const token = localStorage.getItem("token");
