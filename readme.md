@@ -98,6 +98,7 @@ Create `.env` file inside backend folder
 
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
+
 JWT_SECRET=your_secret_key
 
 
@@ -131,7 +132,9 @@ Backend requires these variables
 
 
 MONGO_URI
+
 JWT_SECRET
+
 PORT
 
 
