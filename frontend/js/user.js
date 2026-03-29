@@ -37,7 +37,7 @@ async function addScrap() {
 
   try {
 
-    const response = await fetch("<PASTE RENDER URL HERE AFTER DEPLOYMENT>/api/scrap", {
+    const response = await fetch("https://scrapmart-online-scrap-selling-platform.onrender.com/api/scrap", {
 
       method: "POST",
 
