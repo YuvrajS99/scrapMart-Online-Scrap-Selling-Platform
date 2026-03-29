@@ -1,0 +1,47 @@
+
+> frontend@0.0.0 lint
+> eslint .
+
+
+C:\Users\HP\OneDrive\Desktop\FC\Projects\ScrapMart\frontend\src\components\Navbar.jsx
+  5:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\HP\OneDrive\Desktop\FC\Projects\ScrapMart\frontend\src\context\AuthContext.jsx
+   4:14  error  Fast refresh only works when a file only exports components. Move your React context(s) to a separate file                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       react-refresh/only-export-components
+  20:9   error  Error: Cannot access variable before it is declared
+
+`logout` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+  18 |       } catch (e) {
+  19 |         console.error("Failed to parse stored user", e);
+> 20 |         logout();
+     |         ^^^^^^ `logout` accessed before it is declared
+  21 |       }
+  22 |     }
+  23 |     setLoading(false);
+
+  76 |   };
+  77 |
+> 78 |   const logout = () => {
+     |   ^^^^^^^^^^^^^^^^^^^^^^
+> 79 |     localStorage.removeItem('token');
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 80 |     localStorage.removeItem('user');
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 81 |     setUser(null);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 82 |   };
+     | ^^^^^ `logout` is declared here
+  83 |
+  84 |   return (
+  85 |     <AuthContext.Provider value={{ user, loading, login, register, logout }}>  react-hooks/immutability
+
+C:\Users\HP\OneDrive\Desktop\FC\Projects\ScrapMart\frontend\src\pages\Landing.jsx
+  3:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\HP\OneDrive\Desktop\FC\Projects\ScrapMart\frontend\src\pages\UserDashboard.jsx
+  23:6   warning  React Hook useEffect has a missing dependency: 'fetchMyScraps'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  32:13  error    'myItems' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u                           no-unused-vars
+
+✖ 6 problems (5 errors, 1 warning)
+
