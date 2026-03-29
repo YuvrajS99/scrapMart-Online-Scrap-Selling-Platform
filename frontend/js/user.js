@@ -37,7 +37,7 @@ async function addScrap() {
 
   try {
 
-    const response = await fetch("http://localhost:5000/api/scrap", {
+    const response = await fetch("<PASTE RENDER URL HERE AFTER DEPLOYMENT>/api/scrap", {
 
       method: "POST",
 
@@ -83,7 +83,7 @@ async function loadScraps() {
 
   try {
 
-    const response = await fetch("http://localhost:5000/api/scrap/my", {
+    const response = await fetch("<PASTE RENDER URL HERE AFTER DEPLOYMENT>/api/scrap/my", {
 
       headers: {
         "Authorization": token
@@ -127,7 +127,7 @@ async function loadScraps() {
 // REQUEST PICKUP
 async function requestPickup(id) {
 
-  await fetch(`http://localhost:5000/api/scrap/request/${id}`, {
+  await fetch(`<PASTE RENDER URL HERE AFTER DEPLOYMENT>/api/scrap/request/${id}`, {
 
     method: "PUT",
 

@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:5000/api";
+const API_BASE = "<PASTE RENDER URL HERE AFTER DEPLOYMENT>/api";
 
 async function apiRequest(endpoint, method = "GET", body = null) {
   const token = localStorage.getItem("token");

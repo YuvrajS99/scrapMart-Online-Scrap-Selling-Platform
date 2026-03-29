@@ -49,7 +49,7 @@ async function register() {
 
   try {
 
-    const res = await fetch("http://localhost:5000/api/auth/register", {
+    const res = await fetch("<PASTE RENDER URL HERE AFTER DEPLOYMENT>/api/auth/register", {
 
       method: "POST",
 

@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const connectDB = require("./config/db");
@@ -16,12 +17,12 @@ app.get("/", (req, res) => {
 
 app.use("/api/auth", require("./routes/authRoutes"));
 
-const PORT =process.env.PORT || 5000;
+
+const PORT = process.env.PORT || 5000;
+// const PORT = process.env.PORT || 5000;
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-
-
-app.use("/api/scrap", require("./routes/scrapRoutes"));
 
 app.use("/api/scrap", scrapRoutes);
