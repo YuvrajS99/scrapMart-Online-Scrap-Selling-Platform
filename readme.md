@@ -3,7 +3,7 @@
 ScrapMart is a full-stack web application that connects households and businesses with verified scrap buyers. Users can list scrap materials, track submissions, and sell efficiently while promoting sustainability and recycling.
 
 🌐 **Live Demo:**  
-https://scrap-mart-online-scrap-selling-pla.vercel.app/
+https://scrapmart.online/
 
 ---
 
